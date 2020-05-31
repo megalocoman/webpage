@@ -1,0 +1,147 @@
+header, nav, section, footer {
+    border-radius: 25px;
+    background-size: auto;
+    text-align: center;
+}
+
+header {
+    background: yellow;
+}
+
+nav {
+    background: orange;
+}
+
+section {
+    background: blue;
+}
+
+footer {
+    background: pink;
+}
+
+/* Dropdown Button */
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+    display: block;
+}
+
+@media (max-width: 936px) {
+    #high {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    #tit {
+        display: none;
+    }
+}
+
+@media (min-width: 936px) {
+    .dropdown{
+        display: none;
+    }
+    .grid-container {
+        height: 100%;
+        margin: 0;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1.4fr 0.9fr 0.7fr 1fr 1fr;
+        gap: 9px 9px;
+        grid-template-areas: "nav responsive tutorial" "nav responsive tutorial" ". responsive tool" ". . tool" ". . tool";
+    }
+    #high a{
+        display: block;
+    }
+    .nav {
+        grid-area: nav;
+    
+    }
+    .responsive {
+        grid-area: responsive;
+    }
+    .tutorial {
+        grid-area: tutorial;
+    }
+    .tool {
+        grid-area: tool;
+    }
+    @media (min-width: 1336px) {
+        html, body, .grid-container {
+            height: 100%;
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: ;
+            gap: 9px 9px;
+            grid-template-areas: "nav responsive tutorial tool";
+        }
+        .nav {
+            grid-area: nav;
+        }
+        .responsive {
+            grid-area: responsive;
+        }
+        .tutorial {
+            grid-area: tutorial;
+        }
+        .tool {
+            grid-area: tool;
+        }
+    }
+}

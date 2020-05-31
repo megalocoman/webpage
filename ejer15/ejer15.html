@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ejer15</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        } 
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>responsive design</h1>
+        <h2 id="tit">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos totam autem culpa odit, consectetur
+            fugiat.
+        </h2>
+    </header>
+    <div class="grid-container">
+        <nav class="nav">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="">home</a>
+                    <a href="">tutorial</a>
+                    <a href="">example</a>
+                </div>
+            </div>
+            <div id="high">
+                <a href="">home</a>
+                <a href="">tutorial</a>
+                <a href="">example</a>
+            </div>
+        </nav>
+
+        <section class="responsive">
+            <h3>new responsive design examples</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, harum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, harum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, harum!</p>
+        </section>
+        <section class="tutorial">
+            <h3>new tutorial</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, harum!</p>
+        </section>
+        <section class="tool">
+            <h3>new tools</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, hic.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, hic.</p>
+        </section>
+    </div>
+    <footer>
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, neque.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, neque.</div>
+    </footer>
+
+</body>
