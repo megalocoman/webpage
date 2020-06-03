@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>suma de numeros</title>
+</head>
+
+<body>
+    <input type="text" id="number">
+    <button onclick="sumNumber()">calcular suma de primos</button>
+    <p id="demo"></p>
+</body>
+<script>
+    function sumNumber() {
+        var num = parseInt(document.querySelector("#number").value);
+        sum = 0;
+        for (var i = 1; i <= num; i++) {
+            sum += i;
+        }
+        document.querySelector("#demo").innerHTML = sum;
+    }
+</script>
+
+
+</html>

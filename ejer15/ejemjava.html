@@ -6,9 +6,68 @@
 </head>
 
 <body>
-
+    <!-- 
     <script src="\main.js"></script>
-    <h1></h1>
+    <h1></h1> -->
+    <!-- <p onclick="alert('click here')">click here</p>
+    <p>not click here</p> -->
+
+
+    <input type="text" id="number">
+
+
+    <button onclick="calculatePrime()">calculate prime number</button>
+    <p id="demo"></p>
+
+    <script>
+        // var a = 5;
+        // var b = 12;
+
+        // if (a <= 0 && a <= 0) {
+        //     alert('one or more values are 0 or bellow')
+        // }
+        // else {
+        //     if (a > b) {
+        //         alert('a is bigger than b');
+        //     }
+        //     else if (b > a) {
+        //         alert('b is bigger than a');
+        //     }
+        //     else {
+        //         alert(' both have  the same value')
+        //     }
+        // }
+
+        function calculatePrime() {
+            var a = document.querySelector("#number").value;
+            var b;
+
+            if (a.search("[0-9]") == -1) {
+                b = 'ingrese numero valido '
+            }
+            else {
+                c=parseInt(a);
+                if (c > 0 && c <= 3) {
+                    b = 'este numero es primo';
+                }
+                else if (c % 2 == 0) {
+                    b = 'este numero no es primo';
+                }
+                else {
+                    b = 'este numero es primo';
+                    for (var i = 4; i < c; i++) {
+                        if (c % i === 0) {
+                            b = 'este numero no es primo';
+                            break;
+                        }
+                    }
+                }
+            }
+
+            document.querySelector("#demo").innerHTML = b;
+        }
+
+    </script>
 </body>
 
 </html>

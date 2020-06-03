@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>suma de numeros primos</title>
+</head>
+
+<body>
+    <input type="text" id="number">
+    <button onclick="calcPrime()">calcular suma de primos</button>
+    <p id="demo"></p>
+</body>
+<script>
+    function calcPrime() {
+
+        var a = document.querySelector("#number").value;
+
+        var sum = 0;
+
+        if (a.search("[0-9]") == -1) {
+            sum = 'ingrese numero valido '
+        }
+
+        else {
+            num = parseInt(a);
+            if (a < 2) {
+                sum = 'ingrese valor valido';
+            }
+            else {
+
+                for (var i = 2; i <= num; i++) {
+                    if (isPrime(i))
+                        sum += i
+                }
+
+                function isPrime(num) {
+                    for (var j = 2; j < num; j++) {
+                        if (num % j === 0) {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            }
+
+        }
+
+
+        document.querySelector("#demo").innerHTML = sum;
+    }
+
+</script>
+
+</html>
